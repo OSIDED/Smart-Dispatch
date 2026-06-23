@@ -1,3 +1,8 @@
+/* 1. Add the missing Tailwind directives right here at the top */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   min-height: max(884px, 100dvh);
   font-family: "Inter", sans-serif;
@@ -54,8 +59,9 @@ body {
   border-color: #dcf8c6 transparent transparent transparent;
 }
 
+/* 2. Fixed prefix ordering for the linter error here */
 .glass-card {
   background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
