@@ -1,35 +1,83 @@
 const features = [
   {
-    icon: "notifications_active",
+    icon: "assignment",
     iconColor: "text-primary",
     bgColor: "bg-primary-container/20",
-    title: "Real-time alerts",
+    title: "Automatic Driver Assignment",
     description:
-      "Never miss an update. We ping you for every milestone from pickup to final drop-off.",
+      "Our intelligent dispatch system automatically assigns the most suitable available driver based on location, capacity, and delivery requirements.",
   },
   {
-    icon: "payments",
+    icon: "delivery_dining",
     iconColor: "text-secondary",
     bgColor: "bg-secondary-container/20",
-    title: "Secure payments via chat",
+    title: "Delivery Management",
     description:
-      "Pay instantly using integrated payment links. Secure, fast, and fully documented.",
+      "Manage all your deliveries from a single interface. Track progress, handle exceptions, and communicate with drivers and customers.",
   },
   {
-    icon: "smart_toy",
+    icon: "track_changes",
     iconColor: "text-tertiary",
     bgColor: "bg-tertiary-container/20",
-    title: "24/7 automated support",
+    title: "Order Tracking",
     description:
-      "Our AI-powered assistant is always ready to answer questions or resolve issues instantly.",
+      "Real-time tracking updates for both businesses and customers. Know exactly where every delivery is at any moment.",
+  },
+  {
+    icon: "analytics",
+    iconColor: "text-primary",
+    bgColor: "bg-primary-container/20",
+    title: "Operational Analytics",
+    description:
+      "Get insights into delivery performance, driver efficiency, and customer satisfaction to optimize your operations.",
+  },
+  {
+    icon: "whatsapp",
+    iconColor: "text-secondary",
+    bgColor: "bg-secondary-container/20",
+    title: "WhatsApp Integration",
+    description:
+      "Seamless WhatsApp communication for orders, updates, and notifications. No new apps to learn or install.",
+  },
+  {
+    icon: "psychology",
+    iconColor: "text-tertiary",
+    bgColor: "bg-tertiary-container/20",
+    title: "AI Order Parsing",
+    description:
+      "Coming Soon: Advanced AI that understands natural language orders and converts them into actionable delivery requests.",
   },
 ];
 
 const stats = [
-  { icon: "speed", iconColor: "text-primary", value: "15m", label: "Avg. Pickup Time", dark: false },
-  { icon: "verified_user", iconColor: "text-secondary", value: "100%", label: "Insured Goods", dark: false },
-  { icon: "group", iconColor: "text-tertiary", value: "50k+", label: "Deliveries Done", dark: false },
-  { icon: "thumb_up", iconColor: "", value: "4.9/5", label: "User Rating", dark: true },
+  {
+    icon: "speed",
+    iconColor: "text-primary",
+    value: "15m",
+    label: "Avg. Assignment Time",
+    dark: false,
+  },
+  {
+    icon: "verified_user",
+    iconColor: "text-secondary",
+    value: "99.8%",
+    label: "Order Accuracy",
+    dark: false,
+  },
+  {
+    icon: "group",
+    iconColor: "text-tertiary",
+    value: "50k+",
+    label: "Deliveries Processed",
+    dark: false,
+  },
+  {
+    icon: "thumb_up",
+    iconColor: "",
+    value: "4.9/5",
+    label: "Customer Satisfaction",
+    dark: true,
+  },
 ];
 
 export default function Features() {
@@ -40,17 +88,25 @@ export default function Features() {
           {/* Left: Feature List */}
           <div>
             <h2 className="font-headline-lg text-headline-lg mb-stack-md">
-              Built for Speed and Reliability
+              Built for Reliable Logistics Operations
             </h2>
             <div className="space-y-stack-lg">
               {features.map((f) => (
                 <div key={f.title} className="flex gap-stack-md">
                   <div className={`${f.bgColor} p-3 rounded-lg self-start`}>
-                    <span className={`material-symbols-outlined ${f.iconColor}`}>{f.icon}</span>
+                    <span
+                      className={`material-symbols-outlined ${f.iconColor}`}
+                    >
+                      {f.icon}
+                    </span>
                   </div>
                   <div>
-                    <h4 className="font-headline-md text-headline-md">{f.title}</h4>
-                    <p className="text-body-md text-on-surface-variant">{f.description}</p>
+                    <h4 className="font-headline-md text-headline-md">
+                      {f.title}
+                    </h4>
+                    <p className="text-body-md text-on-surface-variant">
+                      {f.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -61,10 +117,19 @@ export default function Features() {
           <div className="grid grid-cols-2 gap-stack-md">
             <div className="space-y-stack-md pt-12">
               {stats.slice(0, 2).map((s) => (
-                <div key={s.label} className="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant">
-                  <span className={`material-symbols-outlined ${s.iconColor} mb-2`}>{s.icon}</span>
+                <div
+                  key={s.label}
+                  className="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant"
+                >
+                  <span
+                    className={`material-symbols-outlined ${s.iconColor} mb-2`}
+                  >
+                    {s.icon}
+                  </span>
                   <div className="text-headline-lg font-bold">{s.value}</div>
-                  <div className="text-label-sm text-on-surface-variant">{s.label}</div>
+                  <div className="text-label-sm text-on-surface-variant">
+                    {s.label}
+                  </div>
                 </div>
               ))}
             </div>
@@ -74,13 +139,19 @@ export default function Features() {
                   key={s.label}
                   className={
                     s.dark
-                      ? "bg-primary text-white p-6 rounded-2xl shadow-lg border border-primary"
+                      ? "bg-gradient-to-br from-primary to-primary/90 text-white p-6 rounded-2xl shadow-lg border border-primary"
                       : "bg-white p-6 rounded-2xl shadow-sm border border-outline-variant"
                   }
                 >
-                  <span className={`material-symbols-outlined ${s.iconColor} mb-2`}>{s.icon}</span>
+                  <span
+                    className={`material-symbols-outlined ${s.iconColor} mb-2`}
+                  >
+                    {s.icon}
+                  </span>
                   <div className="text-headline-lg font-bold">{s.value}</div>
-                  <div className={`text-label-sm ${s.dark ? "opacity-80" : "text-on-surface-variant"}`}>
+                  <div
+                    className={`text-label-sm ${s.dark ? "opacity-80" : "text-on-surface-variant"}`}
+                  >
                     {s.label}
                   </div>
                 </div>

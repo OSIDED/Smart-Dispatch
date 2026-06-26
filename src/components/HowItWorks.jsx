@@ -1,29 +1,35 @@
 const steps = [
   {
     number: 1,
-    title: "Send a Message",
-    description: "Simply message our verified WhatsApp number to start a new delivery request.",
+    title: "Send Order via WhatsApp",
+    description: "Simply send your order details to our verified WhatsApp number in your preferred format.",
     icon: "chat",
-    detail: '"Hello, I need a pickup"',
+    detail: '"2 burgers, 1 fries, deliver to 123 Main St"',
     detailClass: "text-primary font-bold",
     bubbleClass: "whatsapp-bubble-right bg-[#DCF8C6]",
+    numberBg: "bg-primary",
   },
   {
     number: 2,
-    title: "Choose your Service",
-    description: "Select from Express, Standard, or Scheduled deliveries with transparent pricing.",
-    icon: "check_circle",
-    detail: '"Selecting Express..."',
-    detailClass: "text-on-surface-variant italic",
-    bubbleClass: "whatsapp-bubble-left bg-white border border-outline-variant",
+    title: "Automatic Processing",
+    description: "Our AI-powered system parses your order, checks driver availability, and assigns the optimal driver.",
+    icon: "auto_awesome",
+    detail: "",
+    detailClass: "",
+    bubbleClass: "whatsapp-bubble-left bg-[#e6f7f4] border border-secondary-container/50",
+    showIcon: true,
+    numberBg: "bg-secondary",
   },
   {
     number: 3,
-    title: "Track in Real-time",
-    description: "Receive live location updates and status notifications directly in your chat thread.",
-    icon: null,
-    showProgress: true,
-    bubbleClass: "whatsapp-bubble-right bg-[#DCF8C6]",
+    title: "Real-time Tracking",
+    description: "Get live updates on delivery status directly in your WhatsApp chat, from pickup to drop-off.",
+    icon: "map",
+    detail: "",
+    detailClass: "",
+    bubbleClass: "whatsapp-bubble-right bg-[#e8f4fd] border border-tertiary-container/50",
+    showIcon: true,
+    numberBg: "bg-tertiary",
   },
 ];
 
@@ -33,10 +39,10 @@ export default function HowItWorks() {
       <div className="max-w-screen-xl mx-auto">
         <div className="text-center mb-20">
           <span className="text-primary font-label-sm text-label-sm uppercase tracking-widest">
-            Process
+            How It Works
           </span>
           <h2 className="font-headline-lg text-headline-lg text-on-background mt-2">
-            How it Works
+            Simple WhatsApp-Based Workflow
           </h2>
         </div>
 
@@ -45,21 +51,26 @@ export default function HowItWorks() {
             <div key={step.number} className="relative group">
               <div className="mb-stack-md flex justify-center md:justify-start">
                 <div className={`${step.bubbleClass} p-6 rounded-2xl shadow-md w-full max-w-[280px]`}>
-                  <div className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4">
+                  <div className={`${step.numberBg} text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4`}>
                     {step.number}
                   </div>
                   <h3 className="font-headline-md text-headline-md mb-2">{step.title}</h3>
                   <p className="text-body-md text-on-surface-variant">{step.description}</p>
 
-                  {step.showProgress ? (
-                    <div className="mt-4 h-2 w-full bg-primary/20 rounded-full overflow-hidden">
-                      <div className="h-full bg-primary w-3/4 rounded-full" />
-                    </div>
-                  ) : (
+                  {step.detail && step.detail !== "" ? (
                     <div className={`mt-4 flex items-center gap-2 text-sm ${step.detailClass}`}>
                       <span className="material-symbols-outlined">{step.icon}</span>
                       {step.detail}
                     </div>
+                  ) : (
+                    <>
+                      {step.showIcon && (
+                        <div className="mt-4 flex items-center gap-2 text-sm">
+                          <span className="material-symbols-outlined">{step.icon}</span>
+                          <span className="text-on-surface-variant">AI-powered automation</span>
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
               </div>

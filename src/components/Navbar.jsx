@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import Button from "./Button";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,27 +20,31 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-stack-lg">
-          <a
+          <Link
+            to="/"
             className="text-primary dark:text-primary-fixed font-medium"
-            href="#"
           >
             Home
-          </a>
+          </Link>
           <a
+            href="/#how-it-works"
             className="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors"
-            href="#"
           >
             How it Works
           </a>
           <a
+            href="/#features"
             className="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors"
-            href="#"
           >
             Features
           </a>
-          <button className="bg-primary text-on-primary px-stack-md py-2 rounded-lg font-bold hover:scale-105 transition-transform active:scale-95">
-            Get Started
-          </button>
+          <Link
+            to="/about"
+            className="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors"
+          >
+            About
+          </Link>
+          <Button size="sm">Request Early Access</Button>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -56,30 +62,35 @@ export default function Navbar() {
       {/* Mobile Dropdown */}
       {menuOpen && (
         <div className="md:hidden bg-surface border-t border-outline-variant px-container-padding py-4 flex flex-col gap-4">
-          <a
+          <Link
+            to="/"
             className="text-primary font-medium"
-            href="#"
             onClick={() => setMenuOpen(false)}
           >
             Home
-          </a>
+          </Link>
           <a
+            href="/#how-it-works"
             className="text-on-surface-variant hover:text-primary transition-colors"
-            href="#"
             onClick={() => setMenuOpen(false)}
           >
             How it Works
           </a>
           <a
+            href="/#features"
             className="text-on-surface-variant hover:text-primary transition-colors"
-            href="#"
             onClick={() => setMenuOpen(false)}
           >
             Features
           </a>
-          <button className="bg-primary text-on-primary px-stack-md py-2 rounded-lg font-bold w-full">
-            Get Started
-          </button>
+          <Link
+            to="/about"
+            className="text-on-surface-variant hover:text-primary transition-colors"
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </Link>
+          <Button className="w-full">Request Early Access</Button>
         </div>
       )}
     </header>

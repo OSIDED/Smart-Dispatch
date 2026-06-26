@@ -1,13 +1,13 @@
-# LogisticsFlow — React App
+# Smart Dispatch
 
-A WhatsApp-based logistics landing page built with **React + Vite + Tailwind CSS**.
+A WhatsApp-based logistics automation landing page built with **React + Vite + Tailwind CSS**.
 
 ---
 
 ## Project Structure
 
 ```
-logistics-flow/
+smart-dispatch/
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.jsx
@@ -15,10 +15,15 @@ logistics-flow/
 │   │   ├── HowItWorks.jsx
 │   │   ├── Features.jsx
 │   │   ├── SocialProof.jsx
+│   │   ├── Roadmap.jsx
 │   │   ├── CTA.jsx
 │   │   ├── Footer.jsx
 │   │   ├── BottomNav.jsx
-│   │   └── WhatsAppButton.jsx
+│   │   ├── WhatsAppButton.jsx
+│   │   └── Button.jsx
+│   ├── pages/
+│   │   ├── About.jsx
+│   │   └── Contact.jsx
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css
@@ -42,16 +47,8 @@ npm run build
 ### 4. Preview production build
 npm run preview
 
-## Pushing to GitHub
+## Deploy
 
-# First time
-git init
-git add .
-git commit -m "Initial commit: LogisticsFlow React app"
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git push -u origin main
+This project is configured to deploy to GitHub Pages at `https://OSIDED.github.io/Smart-Dispatch/`.
 
-# After that
-git add .
-git commit -m "Your message"
-git push
+npm run deploy

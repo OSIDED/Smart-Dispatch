@@ -1,6 +1,6 @@
 {
   "homepage": "https://OSIDED.github.io/Smart-Dispatch",
-  "name": "logistics-flow",
+  "name": "smart-dispatch",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",
