@@ -60,10 +60,10 @@ export default function Contact() {
         <div className="space-y-12">
           {/* Header */}
           <div className="text-center">
-            <h1 className="font-headline-lg text-headline-lg text-on-background mb-4">
+            <h1 className="mb-4 text-3xl font-bold text-on-background">
               Get in Touch
             </h1>
-            <p className="text-body-lg text-on-surface-variant">
+            <p className="text-xl text-on-surface-variant">
               We're here to help you streamline your delivery operations.
               Whether you have questions about our service, need technical
               support, or want to discuss a custom solution, our team is ready
@@ -94,7 +94,7 @@ export default function Contact() {
           <div className="grid gap-8 md:grid-cols-[1.2fr_1fr]">
             {/* Contact Information */}
             <div className="space-y-6">
-              <h2 className="font-headline-md text-headline-md text-on-background">
+              <h2 className="text-2xl font-bold text-on-background">
                 Contact Information
               </h2>
               <div className="space-y-4">
@@ -105,7 +105,7 @@ export default function Contact() {
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-headline-md text-headline-md">
+                    <h3 className="font-semibold text-on-background">
                       General Inquiries
                     </h3>
                     <p className="text-on-surface-variant">
@@ -120,7 +120,7 @@ export default function Contact() {
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-headline-md text-headline-md">
+                    <h3 className="font-semibold text-on-background">
                       Support
                     </h3>
                     <p className="text-on-surface-variant">
@@ -135,7 +135,7 @@ export default function Contact() {
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-headline-md text-headline-md">Phone</h3>
+                    <h3 className="font-semibold text-on-background">Phone</h3>
                     <p className="text-on-surface-variant">
                       +234 1-800-123-456
                     </p>
@@ -148,7 +148,7 @@ export default function Contact() {
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-headline-md text-headline-md">Office</h3>
+                    <h3 className="font-semibold text-on-background">Office</h3>
                     <p className="text-on-surface-variant">
                       123 Business District, Lagos, Nigeria
                     </p>
@@ -171,7 +171,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="space-y-6">
-              <h2 className="font-headline-md text-headline-md text-on-background">
+              <h2 className="text-2xl font-bold text-on-background">
                 Send Us a Message
               </h2>
               <form
@@ -194,7 +194,7 @@ export default function Contact() {
                       value={formState.businessName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                       placeholder="Enter your business name"
                     />
                   </div>
@@ -212,7 +212,7 @@ export default function Contact() {
                       value={formState.contactPerson}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                       placeholder="Enter your name"
                     />
                   </div>
@@ -233,7 +233,7 @@ export default function Contact() {
                       value={formState.phoneNumber}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                       placeholder="Enter your phone number"
                     />
                   </div>
@@ -251,7 +251,7 @@ export default function Contact() {
                       value={formState.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                       placeholder="Enter your email address"
                     />
                   </div>
@@ -271,7 +271,7 @@ export default function Contact() {
                       value={formState.businessType}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                     >
                       <option value="">Select your business type</option>
                       <option value="restaurant">
@@ -299,7 +299,7 @@ export default function Contact() {
                       value={formState.expectedDeliveries}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                     >
                       <option value="">Select expected volume</option>
                       <option value="1-5">1-5 deliveries</option>
@@ -325,7 +325,7 @@ export default function Contact() {
                     onChange={handleChange}
                     rows="5"
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 resize-y disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 resize-y disabled:opacity-50"
                     placeholder="How can we help you? Feel free to ask any questions about our service..."
                   />
                 </div>
@@ -334,7 +334,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-primary text-on-primary px-6 py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors transform active:scale-95 disabled:opacity-50 sm:max-w-xs"
+                    className="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors transform active:scale-95 disabled:opacity-50"
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </button>
