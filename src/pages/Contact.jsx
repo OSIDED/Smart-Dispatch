@@ -91,7 +91,7 @@ export default function Contact() {
           )}
 
           {/* Contact Info & Form */}
-          <div className="grid gap-8 md:grid-cols-[1.2fr_1fr]">
+          <div className="grid gap-8 md:grid-cols-2">
             {/* Contact Information */}
             <div className="space-y-6">
               <h2 className="text-2xl font-bold text-on-background">
@@ -137,7 +137,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-on-background">Phone</h3>
                     <p className="text-on-surface-variant">
-                      +234 1-800-123-456
+                      +233 26 648 4287
                     </p>
                   </div>
                 </div>
@@ -150,15 +150,15 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-on-background">Office</h3>
                     <p className="text-on-surface-variant">
-                      123 Business District, Lagos, Nigeria
+                      Accra & Obuasi, Ghana
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 flex items-center gap-3">
+              <div className="mt-6 flex justify-center">
                 <a
-                  href="https://wa.me/2348001234567"
+                  href="https://wa.me/233502826749"
                   className="flex items-center gap-2 bg-primary/10 hover:bg-primary/20 px-4 py-3 rounded-lg font-medium transition-colors"
                 >
                   <span className="material-symbols-outlined text-primary">
@@ -194,7 +194,7 @@ export default function Contact() {
                       value={formState.businessName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                       placeholder="Enter your business name"
                     />
                   </div>
@@ -212,7 +212,7 @@ export default function Contact() {
                       value={formState.contactPerson}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                       placeholder="Enter your name"
                     />
                   </div>
@@ -233,7 +233,7 @@ export default function Contact() {
                       value={formState.phoneNumber}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                       placeholder="Enter your phone number"
                     />
                   </div>
@@ -251,7 +251,7 @@ export default function Contact() {
                       value={formState.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                       placeholder="Enter your email address"
                     />
                   </div>
@@ -271,7 +271,7 @@ export default function Contact() {
                       value={formState.businessType}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                     >
                       <option value="">Select your business type</option>
                       <option value="restaurant">
@@ -299,7 +299,7 @@ export default function Contact() {
                       value={formState.expectedDeliveries}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
+                      className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50"
                     >
                       <option value="">Select expected volume</option>
                       <option value="1-5">1-5 deliveries</option>
@@ -325,12 +325,12 @@ export default function Contact() {
                     onChange={handleChange}
                     rows="5"
                     required
-                    className="w-full px-4 py-3 rounded-border bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 resize-y disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 resize-y disabled:opacity-50"
                     placeholder="How can we help you? Feel free to ask any questions about our service..."
                   />
                 </div>
 
-                <div className="flex justify-end">
+                <div className="flex justify-center">
                   <button
                     type="submit"
                     disabled={isSubmitting}

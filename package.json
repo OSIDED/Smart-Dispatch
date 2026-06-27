@@ -7,9 +7,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:deploy": "vite build --base=/Smart-Dispatch/",
     "lint": "oxlint",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:deploy",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

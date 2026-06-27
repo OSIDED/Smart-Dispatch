@@ -1,51 +1,51 @@
 const features = [
   {
-    icon: "assignment",
+    icon: "electric_rickshaw",
     iconColor: "text-primary",
     bgColor: "bg-primary-container/20",
-    title: "Automatic Driver Assignment",
+    title: "Faster Driver Assignment",
     description:
-      "Our intelligent dispatch system automatically assigns the most suitable available driver based on location, capacity, and delivery requirements.",
+      "Automatically find and assign an available driver within seconds.",
   },
   {
-    icon: "delivery_dining",
+    icon: "call_end",
     iconColor: "text-secondary",
     bgColor: "bg-secondary-container/20",
-    title: "Delivery Management",
+    title: "Less Manual Coordination",
     description:
-      "Manage all your deliveries from a single interface. Track progress, handle exceptions, and communicate with drivers and customers.",
+      "Reduce constant phone calls and WhatsApp messages between staff and riders.",
   },
   {
-    icon: "track_changes",
+    icon: "sentiment_satisfied",
     iconColor: "text-tertiary",
     bgColor: "bg-tertiary-container/20",
-    title: "Order Tracking",
+    title: "Better Customer Experience",
     description:
-      "Real-time tracking updates for both businesses and customers. Know exactly where every delivery is at any moment.",
+      "Customers receive updates without staff manually sending messages.",
   },
   {
-    icon: "analytics",
+    icon: "account_tree",
     iconColor: "text-primary",
     bgColor: "bg-primary-container/20",
-    title: "Operational Analytics",
+    title: "Organized Delivery Operations",
     description:
-      "Get insights into delivery performance, driver efficiency, and customer satisfaction to optimize your operations.",
+      "Orders, drivers, and delivery statuses are managed in one system instead of scattered across chats and calls.",
   },
   {
-    icon: "whatsapp",
+    icon: "chat",
     iconColor: "text-secondary",
     bgColor: "bg-secondary-container/20",
-    title: "WhatsApp Integration",
+    title: "Built Around WhatsApp",
     description:
-      "Seamless WhatsApp communication for orders, updates, and notifications. No new apps to learn or install.",
+      "Businesses continue using WhatsApp, eliminating the need to learn a completely new ordering system.",
   },
   {
-    icon: "psychology",
+    icon: "trending_up",
     iconColor: "text-tertiary",
     bgColor: "bg-tertiary-container/20",
-    title: "AI Order Parsing",
+    title: "Designed to Scale",
     description:
-      "Coming Soon: Advanced AI that understands natural language orders and converts them into actionable delivery requests.",
+      "Smart Dispatch starts with simple WhatsApp order processing today and is designed to grow into a complete delivery management platform with dashboards, mobile applications, AI automation, and analytics.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function Features() {
           {/* Left: Feature List */}
           <div>
             <h2 className="font-headline-lg text-headline-lg mb-stack-md">
-              Built for Reliable Logistics Operations
+              Why Businesses Choose Smart Dispatch
             </h2>
             <div className="space-y-stack-lg">
               {features.map((f) => (

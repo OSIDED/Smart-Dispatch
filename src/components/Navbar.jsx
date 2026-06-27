@@ -27,13 +27,19 @@ export default function Navbar() {
             Home
           </Link>
           <a
-            href="/#how-it-works"
+            href="#how-it-works"
             className="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors"
           >
             How it Works
           </a>
           <a
-            href="/#features"
+            href="#who-its-for"
+            className="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors"
+          >
+            Who It's For
+          </a>
+          <a
+            href="#features"
             className="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors"
           >
             Features
@@ -70,14 +76,21 @@ export default function Navbar() {
             Home
           </Link>
           <a
-            href="/#how-it-works"
+            href="#how-it-works"
             className="text-on-surface-variant hover:text-primary transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             How it Works
           </a>
           <a
-            href="/#features"
+            href="#who-its-for"
+            className="text-on-surface-variant hover:text-primary transition-colors"
+            onClick={() => setMenuOpen(false)}
+          >
+            Who It's For
+          </a>
+          <a
+            href="#features"
             className="text-on-surface-variant hover:text-primary transition-colors"
             onClick={() => setMenuOpen(false)}
           >

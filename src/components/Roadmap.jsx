@@ -13,10 +13,13 @@ export default function Roadmap() {
     },
     {
       version: "Version 2",
-      title: "Restaurant Dashboard",
-      description: "Self-service tools for restaurant management",
+      title: "Business Dashboard",
+      description: "Self-service tools for business management",
       features: [
         "Restaurant Dashboard",
+        "Business Dashboard",
+        "Business Analytics",
+        "Delivery Performance Reports",
         "Authentication System",
         "Business Self-Onboarding"
       ],
@@ -28,7 +31,8 @@ export default function Roadmap() {
       description: "Native mobile application for drivers",
       features: [
         "Driver Mobile Application",
-        "GPS Tracking",
+        "Live GPS Tracking",
+        "Multi-branch Support",
         "Push Notifications"
       ],
       status: "planned"
@@ -38,6 +42,7 @@ export default function Roadmap() {
       title: "AI Dispatch Optimization",
       description: "Advanced AI-powered optimization features",
       features: [
+        "AI Order Processing",
         "AI Dispatch Optimization",
         "Fleet Management",
         "Advanced Analytics"
@@ -53,9 +58,9 @@ export default function Roadmap() {
           <span className="text-primary font-label-sm text-label-sm uppercase tracking-widest">
             Product Roadmap
           </span>
-          <h2 className="font-headline-lg text-headline-lg text-on-background mt-2">
-            Our Vision for the Future
-          </h2>
+            <h2 className="font-headline-lg text-headline-lg text-on-background mt-2">
+              The Future of Smart Dispatch
+            </h2>
         </div>
 
         <div className="grid gap-12 md:grid-cols-2">
